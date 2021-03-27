@@ -1,0 +1,64 @@
+1.  Declare appropriate datatype with appropriate name for the following:
+    a) Student Name : String
+    b) Age : int
+    c) Street Address : String
+    d) Tuition Fee check: Instate (Y or N): boolean
+    e) ZipCode : int
+
+2.  Declare appropriate datatype with appropriate name for the following:
+    a) Car Model : String
+    b) Car Manufacturer: String
+    c) Electric (Y/N) : boolean
+    d) Fuel (Gas/Diesel) : String
+    e) Price : double
+    
+3.  Meera wants to write a game in Java and wanted to share it with Krishna. Meera has a MacOS computer
+    and Krishna has a Windows PC.  What all software does Meera need and what all software does Krishna
+    need.  Next to each software specify Mandatory and/or Optional
+    
+    Meera needs:
+      JDK: mandatory
+        JRE and Java SDK come automatically: mandatory
+            JVM: created on each operating software: mandatory
+    Krishna needs:
+      JRE: mandatory
+        JVM: mandatory
+        
+4.  What command does Krisha need to run the game called GuessTheNumber.  The package name of the game
+    is com.freegames
+    
+    Answer: javac freegames
+    (not sure if it is javac or javaC)
+    
+    
+5.  Here is my first Java program.  Let me know if this will compile?  If yes, what will be the
+    output.  If No, first make only the changes that will allow the program to compile.  Next once it compiles
+    can I run it.  If yes, what is the output? If No, what should I change to get the output in the print
+    statements.
+    package com.ragu;
+    public class myclass;
+    {
+    public static void Main(string[] args)
+    {
+    float My_float = 10.2;
+    char C = "A";
+    System.out.println(C);
+    System.out.println(My_float);
+    }
+    }  
+    Note: Do not copy this in IJ to test.  Find the output without any help and make corrections without
+    using the IJ editor.
+    
+    Answer: No this will not compile. 
+    package com.ragu;
+    public class myclass;
+    {
+    public static void Main(string[] args)
+    {
+    float My_float = 10.2F;
+    char C = 'A';
+    System.out.println(C);
+    System.out.println(My_float);
+    }
+    } 
+    

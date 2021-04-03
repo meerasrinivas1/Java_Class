@@ -1,0 +1,67 @@
+1.   Take seconds as input and find number of weeks, days, hours, mins and seconds   
+        double sec = 788450  ;
+        double weeks = (int)(sec/604800);
+        System.out.println("weeks " + weeks);
+        double days = (int)(sec / 86400);
+        System.out.println("days " + (days- (7* weeks)));
+        double secs = sec % 86400;
+        double hours = (int)(secs/3600);
+        System.out.println("hours " + hours);
+        double mins = (int)(secs % 60);
+        System.out.println("minutes " + mins);
+        secs = (secs % 60);
+        System.out.println("seconds " + secs);
+
+
+
+2.  Write a program to find the diameter, perimeter and area of a circle given the radius
+  package com.meera;
+  import java.lang.Math;
+
+  public class Main {
+
+    public static void main(String[] args) {
+    
+        double radius = 5;
+        double diameter = radius *2;
+        double area = Math.PI * (radius* radius);
+        double circumfrence = diameter * Math.PI;
+        System.out.println("The diamter is: " + diameter);
+        System.out.println("The area is: " + area);
+        System.out.println("The circumfrence is: " + circumfrence);
+    }
+}
+
+
+3.  Write a program to find if a number is positive or negative
+
+double number = -3;
+    if((number>0) || (number ==0)){
+        System.out.println("Number is postive");
+    }
+    else{
+        System.out.println("Number is negative");
+    }
+   
+4.  Write a program to print a number in terms of 10s and units.
+    Note: Number will not exceed 99
+    
+    int number = 11;
+        int tens = (number / 10)*10;
+        int remainder = number % 10;
+        if (tens > 10 || tens == 10)
+            System.out.println(number + " = "+ tens + " + " + remainder);
+        else{
+            System.out.println(number + " = " + remainder);
+        }
+  
+5.  Write a program to tell if a given character is a vowel or consonant  
+        char letter = 'b';
+        if(letter == 'a' || letter == 'e' || letter == 'i'|| letter == 'o'|| letter == 'u'){
+            System.out.println(letter + " is a vowel.");
+        }
+        else{
+            System.out.println(letter + " is a consonant.");
+        }
+
+    

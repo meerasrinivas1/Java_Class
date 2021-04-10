@@ -1,0 +1,129 @@
+1. Given a String input, find the character that occurs maximum and minimum (Case-insensitive)
+    public static char minAndMax(String word){
+        int min = word.charAt(0);
+        char minResult = ' ';
+        for(int i = 0; i<word.length(); i++){
+            if(min.compareTo(word.charAt(i)) < 0){
+                 minResult = word.charAt(i);
+            }
+        }
+        return maxResult;
+    }
+    
+2.  Print the following pattern for a given input number 1 - 9
+    Input 5
+    1
+    2 2
+    3 3 3
+    4 4 4 4
+    5 5 5 5 5
+    
+    public static void repeatNum (int number){
+      for (int i = 1; i <= number; i++) {
+        for (int j = 1; j <= i; j++) {
+          System.out.print(i);
+        }
+      System.out.println();
+      }
+
+    }
+    
+3. Write a method in Java to remove all blank spaces from a string
+public static String removeBlankSpaces(String sentence){
+        for (int i = 0; i< sentence.length(); i++){
+            if(sentence.substring(i,i+1).equals(" ")){
+                sentence.substring(i,i+1) = "";
+            }
+            return sentece;
+        }
+    }
+    
+  OR
+   public static String removeBlankSpaces(String sentence){
+        String newSentence = sentence.replaceAll(" ", "");
+        return newSentence;
+
+    }
+    
+4.  Write a method to remove all 2nd consecutive blank spaces
+    Eg:  "Hello World", should just give output "Hello World", but
+        "Hello   World", should give output as "Hello World".  Here you removed 3 blank spaces and
+        only one.
+    Eg2: "United   States is a country    that  is  formed by    uniting    50 states"
+    Output: "United States is a country that is formed by uniting 50 states"
+
+    public static String removeEveryTwo (String sentence){
+        String newSentence = sentence.replaceAll("   ", " ");
+        sentence = newSentence.replaceAll("  ", " ");
+        return sentence;
+    }
+    
+
+
+6.public static void multipTriangle(){
+        for(int i = 1; i<= 10; i++ ){
+            for(int j = 1; j<=i; j++)
+                System.out.print(i*j+ " " );
+                System.out.println("\n");
+        }
+    }
+    
+
+7.  Write a program that will take 3 integers and determine if a triangle can be formed
+    public static boolean isTriangle(int x, int y, int z){
+        if(((x+y)>z) && ((x+z)>y) && ((y+z)>x)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+8. Write a program to capitalize only the first character of every word in a given sentence.
+       public static String capFirstWord(String sentence){
+        for(int i = 1; i< sentence.length(); i++){
+            if(sentence.substring(i,i+1).equals(" ")) {
+                sentence = sentence.replace(sentence.substring(i+1,i+2), sentence.substring(i+1,i+2).toUpperCase());
+            }
+        }
+        return sentence;
+    }
+    
+9. Write a program to find if a number is a Narcissistic number
+    public static boolean narcissistic (double number){
+        double num2 = 0;
+        double num = 0;
+        double digits = 0;
+        double findDigit =number;
+        while (number>0){
+            digits++;
+            num = number%10;
+            number = number/10;
+            //num2 = num2 + (Math.pow(num,digits));
+        }
+        num2 = num2 + (Math.pow(num,digits));
+        if(num2 == findDigit){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+10. Find the factors of a given number
+    Eg: 24
+    Output: 1, 2, 3, 4, 6, 8, 12, 24
+    public static String factors (int number){
+        String output = "output ";
+        for(int i = 1; i<= number;i++ ){
+            if(number % i == 0){
+                output += i + ", ";
+            }
+        }
+        return output;
+    }
+    
+    
+    
+    
+    

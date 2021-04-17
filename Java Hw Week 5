@@ -1,1 +1,103 @@
+1.  Write a program to duplicate an array
+public static void duplicateArray(){
+        int arr1 [] = {2,4,6,8};
+        int arr2 [] = new int[arr1.length];
+        for(int i = 0; i<arr1.length; i++){
+            arr2[i]= arr1[i];
+        }
+        for(int i = 0; i<arr2.length; i++){
+            System.out.print(arr2[i]+ " ");
+        }
+    }
+ 2.  Write a program to determine if two matrices are equal
+    If the matrixA and matrixB are equal the output should be "Equal" if not "Not Equal"
+    public static void equalArray(){
+        boolean validity = true;
+
+        int twoDArr1 [][] = { {1,2}, {3,4}, {5,6}};
+        int twoDArr2 [][] = { {1,2}, {3,4}, {5,6}};
+        int rowOfTwoDArr1 = twoDArr1.length;
+        int colOfTwoDArr1 = twoDArr1[0].length;
+        int rowOfTwoDArr2 = twoDArr2.length;
+        int colOfTwoDArr2 = twoDArr2[0].length;
+        if(rowOfTwoDArr1 == rowOfTwoDArr1 && colOfTwoDArr1== colOfTwoDArr2){
+            for(int row = 0; row< twoDArr1.length; row++){
+                for(int col = 0; col< twoDArr1.length-1; col++){
+                    if(twoDArr1[row][col] == twoDArr2[row][col]){
+                        validity= true;
+                    }
+                    else{
+                        validity = false;
+                    }
+                }
+            }
+        }
+        else{
+            System.out.println("Not Equal");
+        }
+        if(validity == true){
+            System.out.println("Equal");
+        }
+        else{
+            System.out.println("Not Equal");
+        }
+    }
+    
+ 3. Write a program to transpose a matrix.  Transpose means rows will become column and
+    column will become rows.
+    
+    public static void transposeTwoDArray(){
+        int [][] twoDArr1 = {{1,2}, {3,4},{5,6}};
+        int row = twoDArr1.length;
+        int col = twoDArr1[0].length;
+        int[][] newArr2 = new int [col][row];
+        for (int theRow = 0; theRow < row; theRow++ ){
+            for(int theCol = 0; theCol < col; theCol++){
+                newArr2[theCol][theRow] = twoDArr1[theRow][theCol];
+            }
+        }
+        for(int rows = 0; rows< newArr2.length; rows++){
+            for(int cols = 0; cols<newArr2[rows].length; cols++){
+                System.out.print(newArr2[rows][cols] + " ");
+            }
+            System.out.println();
+        }
+    }
+    
+ 4. Write a program to find if a matrix is a sparse matrix.
+    Note: Sparse matrix means at least half of the total elements in a matrix should be zero
+    
+    public static void sparseArray(){
+        int count = 0;
+        int [][] twoDArr =  {{1,2},{0,0}, {0,0}, {0,0}, {0,0}, {1,5}};
+        for(int row = 0; row< twoDArr.length; row++){
+            for(int col = 0; col< twoDArr[row].length; col++ ){
+                if(twoDArr[row][col] == 0){
+                    count++;
+                }
+            }
+
+        }
+        if (count >= (twoDArr.length* twoDArr[0].length)/2 ){
+            System.out.println("Sparse Matrix");
+        }
+        else{
+            System.out.println("Not a Sparse Matrix");
+        }
+    }
+    
+5. Write a program to remove duplicates in an integer array
+
+NOT SURE HOW TO DO : INCOMPLETE
+public static void removeDuplicate(){
+        int [] arr = {1,2,3,3,4,5};
+        int begElem = 0;
+        for(int elem = 0; elem < arr.length; elem++){
+            if(arr[elem] != arr[elem +1]){
+                elem;;
+            }
+        }
+    }
+    
+    
 

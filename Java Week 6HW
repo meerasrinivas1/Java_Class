@@ -17,3 +17,37 @@ public static int fibSeq(){
 2.  Write a method to find the LCM of two numbers.
     Note: Write your own
     
+3.Write a method to sort an array of integers    
+  public static void sortArray(int [] arr){
+    for(int i =1; i<arr.length; i++){
+        int currentVal = arr[i];
+        int sortVal = i-1;
+        while(sortVal > -1 && arr[sortVal] > currentVal ){
+            arr[sortVal+1] = arr[sortVal];
+            sortVal--;
+        }
+        arr[sortVal+1] = currentVal;
+    }
+        for(int i = 0; i< arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+    }  
+    
+4.  Take inputs from user to input gallons, quarts, pints and cups.
+    Write a program that takes these 4 parameters and returns
+    an integer that is in cups.    
+        public static void convertToCups(int gallons, int quarts, int pints, int cups){
+           int totalCups = (gallons*16) + (quarts*4) + (pints*2) + cups;
+           System.out.println(totalCups + " cups");
+        }   
+        
+5. Write a program that will print N lines of Pascal's triangle.  Take N as user input
+    Input 4
+    Output:
+        1
+      1 2 1
+     1 3 3 1
+    1 4 6 4 1      
+    
+    
+    

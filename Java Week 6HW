@@ -1,0 +1,19 @@
+1.  Take an input N from the user and write a program to print Fibonacci series up to N
+
+public static int fibSeq(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int userNum = scanner.nextInt();
+        int [] arr = new int [userNum];
+        arr[0]= 1;
+        arr[1]=1;
+        for(int i = 2; i<userNum; i++){
+            arr[i]= arr[i-1] + arr[i-2];
+        }
+        return arr[userNum-1];
+
+    }
+    
+2.  Write a method to find the LCM of two numbers.
+    Note: Write your own
+    

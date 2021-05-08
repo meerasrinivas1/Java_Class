@@ -1,0 +1,109 @@
+1. public static String capVowel(String word){
+        String lowerWord = " ";
+        for(int i =0; i<word.length(); i++){
+            char vowel = word.charAt(i);
+            switch(vowel){
+                case 'a':
+                    vowel=Character.toUpperCase(word.charAt(i));
+                    //lowerWord.setCharAt(i,Character.toUpperCase(word.charAt(i)));
+                    break;
+                case 'e':
+                    vowel=Character.toUpperCase(word.charAt(i));
+                    break;
+                case 'i':
+                    vowel=Character.toUpperCase(word.charAt(i));
+                    break;
+                case 'o':
+                    vowel=Character.toUpperCase(word.charAt(i));
+                    break;
+                case 'u':
+                    vowel=Character.toUpperCase(word.charAt(i));
+                    break;
+            }
+
+        }
+
+        return word;
+    }
+2.  Print today's date like this:
+    "Today is Sunday 25th of April, 2021.  It is currently 10:02:06 PM here"
+        Date todayDate = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat( "EEEE d'th' 'of' MMM yyyy");
+        System.out.println("Today is "  + sdf.format(todayDate) );
+     
+3.  Tell if this year is a leap year or not?
+    public static boolean isLeapYear(int year){
+        boolean leapyear = true;
+        if(year % 4 ==0){
+            if(year % 100 ==0){
+                if(year % 400 ==0){
+                    leapyear = true;
+                }
+                else{
+                    leapyear = false;
+                }
+            }
+            else{
+                leapyear = true;
+            }
+        }
+        else{
+            leapyear = false;
+        }
+        return leapyear;
+
+    }
+4. Print the first  5 perfect numbers.
+    A perfect number is one where the sum of its factors equals twice that number.
+    Eg: 6.  Factors of 6 are 1,2,3,6 and if you add all of them it will be 12 which is
+    twice that number
+    
+    public static boolean perfectNumber(int num){
+        //int [] arr = new int[5];
+        //boolean perfect = true;
+        int sum = 0;
+            for(int i = 1; i<= num;i++ ){
+                if(num % i == 0) {
+                    sum = sum + i;
+                }
+            }
+            if(sum == 2* num) {
+                return true;
+            }
+            else{
+                return false;
+        }
+    }
+    
+5.Given an integer sum the odd numbers and sum the even numbers.  If the odd sum is greater 
+    than even sum return Odd, if even sum is greater than odd sum then return Even.
+    
+    public static int evenOddSum(int num){
+        int sumEven =0;
+        int sumOdd = 0;
+        num = Math.abs(num);
+        while(num !=0){
+            int x = num % 10;
+            if(x %2 ==0){
+                sumEven = sumEven +x;
+            }
+            else{
+                sumOdd = sumOdd +x;
+            }
+            num = num /10;
+        }
+        if(sumOdd > sumEven){
+            System.out.print("Odd Sum is Bigger: ");
+            return sumOdd;
+        }
+        else if(sumOdd < sumEven){
+            System.out.print("Even Sum is Bigger: ");
+            return sumEven;
+        }
+        else{
+            return num;
+        }
+    }
+    
+        
+    

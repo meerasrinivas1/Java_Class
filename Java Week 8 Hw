@@ -1,0 +1,133 @@
+1.  Write a class Person with attributes firstName, lastName, age, gender, city
+
+public class Person {
+
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String gender;
+    private String city;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+}
+
+2.  Reverse a String
+    Input:  gold
+    Output: dlog
+
+    public static String reverseString (String word){
+        String newWord ="";
+        for(int i =word.length()-1; i>=0; i--){
+            newWord += (word.charAt(i));
+        }
+        return newWord;
+    }
+
+
+3.  Reverse an integer    
+    Note: Do not convert it into a String
+    Input: 897654
+    Output: 456798
+    
+    public static int reverseInt(int num){
+        int newInt =0;
+        while(num!=0){
+            int x = num%10;
+            num= num/10;
+            newInt = newInt * 10 + x;
+        }
+        return newInt;
+    }
+
+
+4.  Write a program that will return the first N vowels in a given String.  N will be a number between
+    1 and 5.  Give an error if that many vowels are not there.
+    Input: nthVowel("Compassionate", 3)
+    Output: oai
+    
+    public static String nthVowel(String word, int nth){
+        int count =0;
+        String newVowels ="";
+        while(count !=nth){
+            for(int i =0; i<word.length(); i++){
+                if(word.charAt(i)== 'a' || word.charAt(i)== 'e' ||word.charAt(i)== 'i' ||word.charAt(i)== 'o' || word.charAt(i)== 'u'){
+                    count++;
+                    newVowels += word.charAt(i);
+                }
+            }
+        }
+//        if(count<nth){
+//            return "less vowels...";
+//        }
+        //else{
+            return newVowels;
+        //}
+
+    }
+    
+    
+    
+
+5.  Take a date as input from user.  User enters date in dd mm yyyy format.
+    Write a method to find if a date is a perfect date.
+    Rules for a perfect date
+    mm * dd -> If this is a 1 digit number it matches with the last digit of the year
+    mm * dd -> If this is a 2 digit number it matches with the last two digit of the year
+    mm * dd -> If this is a 3 digit number it matches with the last three digit of the year
+
+
+    public static boolean perfectDate(int dd, int mm, int yyyy){
+        int ddmm = dd * mm;
+        if(ddmm<10 && ddmm == yyyy%10){
+            return true;
+        }
+
+        else if(ddmm>=10 && ddmm<100 && ddmm == yyyy%100){
+            return true;
+        }
+        else if(ddmm>=100 && ddmm<1000 && ddmm ==yyyy%1000){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }

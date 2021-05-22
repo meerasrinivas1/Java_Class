@@ -1,0 +1,22 @@
+1. public static String rps(String player1, String player2){
+        if(player1.equals(player2)){
+            return "TIE";
+        }
+        if(player1.equals("S") && player2.equals("P")){
+            return "Player 1 Wins";
+        }
+        else if(player2.equals("P")&& player1.equals("S")){
+            return "Player 2 Wins";
+        }
+        else if(player1.equals("P") && player2.equals("R")){
+            return "Player 2 Wins";
+        }
+        else if(player1.equals("R") && player2.equals("P")){
+            return "Player 1 Wins" ;
+        }
+        else{
+            return "dont understand";
+        }
+    }
+    
+2.

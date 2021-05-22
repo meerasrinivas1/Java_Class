@@ -19,4 +19,22 @@
         }
     }
     
-2.
+2.   public static String encryptSentence(String sentence){
+        String encryptedSentence = "";
+        String finalSentence ="";
+        for(int i =0; i<sentence.length(); i++){
+            if (sentence.charAt(i) != 'a' && sentence.charAt(i) != 'e' && sentence.charAt(i) != 'i' && sentence.charAt(i) != 'o' && sentence.charAt(i) != 'u'){
+                encryptedSentence += sentence.charAt(i);
+            }
+        }
+        for(int x =0; x<encryptedSentence.length(); x++) {
+            for (int y = 0; y < encryptedSentence.length(); y++) {
+                if (encryptedSentence.charAt(x) != encryptedSentence.charAt(y)) {
+                    finalSentence += encryptedSentence.charAt(x);
+                }
+            }
+        }
+    return finalSentence.toUpperCase();
+    }
+    
+    

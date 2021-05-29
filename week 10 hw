@@ -1,0 +1,116 @@
+1.    public static String multiple4(String sentence){
+        int sentenceSplit = sentence.length()/4;
+        String newSentence ="";
+        if(sentence.length() % 4 != 0){
+            return "Error...";
+        }
+        else{
+            for(int i =0; i< sentenceSplit ; i++){
+                int j=i*4;
+                String x =sentence.substring(j,j+2);
+                String y =sentence.substring(j+2,j+4);
+                newSentence += y+x;
+
+
+            }
+        }
+        return newSentence;
+    }
+
+2.    public static boolean canBuild(String[] array){
+        boolean canBuild = true;
+        for(int i =1; i<=array.length; i++){
+            if(i == 7){
+                break;
+            }
+            else{
+                if(array[i].contains(array[i-1])){
+                    canBuild = true;
+                }
+                else{
+                    canBuild = false;
+                    break;
+                }
+            }
+
+        }
+        return canBuild;
+    }
+3.   
+//3 does not work as intended
+public static char findMissing(String [] array){
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        int i = 0;
+        int j =0;
+        char val = 'a';
+        if(array[i].equals(alphabet.charAt(j))){
+            i++;
+            j++;
+            if(!array[i].equals(alphabet.charAt(j))){
+                val = alphabet.charAt(j);
+                i++;
+                j++;
+            }
+        }
+        return val;
+   }
+   
+4. public class Employee {
+     private String companyName;
+     private int empNum;
+     private String empFirstName;
+     private String empLastName;
+     private int experience;
+     private float salary;
+     private int totalEmployees;
+
+    public Employee(String companyName, int empNum, String empFirstName, String empLastName, int experience, float salary, int totalEmployees) {
+        this.companyName = companyName;
+        this.empNum = empNum;
+        this.empFirstName = empFirstName;
+        this.empLastName = empLastName;
+        this.experience = experience;
+        this.salary = salary;
+        this.totalEmployees = totalEmployees;
+    }
+
+    public String getEmpName() {
+        return empLastName + empFirstName;
+    }
+    public int getTotalEmployees() {
+        return totalEmployees;
+    }
+    public float getSalary(){
+        if(experience >0 && experience<=5){
+            salary += salary * 0.05;
+            return salary;
+        }
+        else{
+            salary += salary * 0.10;
+            return salary;
+        }
+    }
+}
+
+5.import java. lang. Math. *;
+public class Circle {
+
+    private double radius = 1.0;
+    private String color = "red";
+
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
+    }
+    public Circle(){
+
+    }
+    public double getRadius(){
+        return radius;
+    }
+    public double getArea(){
+        return Math.PI * (radius * radius);
+    }
+}
+
+   

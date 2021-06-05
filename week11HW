@@ -1,0 +1,132 @@
+1. public class Invoice {
+    private String partNumber;
+    private String partDescription;
+    private int quantity;
+    private double price;
+
+    public Invoice(String partNumber, String partDescription, int quantity, double price) {
+        this.partNumber = partNumber;
+        this.partDescription = partDescription;
+        if(!(this.quantity >=0 )){
+            this.quantity =0;
+        }
+        else{
+            this.quantity = quantity;
+        }
+        if(!(this.price >= 0.0)){
+            this.price = 0.0;
+        }
+        else{
+            this.price = price;
+        }
+
+    }
+
+    public String getPartNumber() {
+        return partNumber;
+    }
+
+    public void setPartNumber(String partNumber) {
+        this.partNumber = partNumber;
+    }
+
+    public String getPartDescription() {
+        return partDescription;
+    }
+
+    public void setPartDescription(String partDescription) {
+        this.partDescription = partDescription;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public double getInvoice(){
+        return quantity * price;
+
+    }
+}
+2. public class SavingsAccount {
+    private double annualInterestRate;
+    private double savingsBalance;
+
+    public SavingsAccount(double savingsBalance) {
+        this.savingsBalance = savingsBalance;
+    }
+
+    public void modifyInterestRate(double annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    public double calculateMonthlyInterest(){
+        double monthlyInterest = (savingsBalance * annualInterestRate) / 12;
+        savingsBalance += monthlyInterest;
+        return savingsBalance;
+    }
+
+}
+3. public class Book {
+    private String bookName;
+    public int ISBN;
+    private String authorName;
+    private String publisher;
+
+    public Book(String bookName, int ISBN, String authorName, String publisher) {
+        this.bookName = bookName;
+        this.ISBN = ISBN;
+        this.authorName = authorName;
+        this.publisher = publisher;
+    }
+    public Book(){
+
+    }
+
+    public String getBookInfo(){
+        String ISBNasString = Integer.toString(ISBN);
+        return (bookName + " has an ISBN as " + ISBNasString + ". "+ "Written by " + authorName + " published by " + publisher   );
+
+    }
+}
+package com.meera;
+import java.util.Scanner;
+import java.util.Hashtable;
+
+
+public class BookTest<myBook, ISBN> {//extends Book{
+    //Scanner input = new Scanner(System.in);
+    Book myBook = new Book("Song of Achilles",97800620,"Madeline Miller",
+            "Ecco Press");
+    Hashtable<Integer, Book> myBooks= new Hashtable <Integer, Book> ();
+    myBooks.put(ISBN, myBook);
+
+}
+4. doesnt work because of error in number 3^^
+5. public static boolean isInOrder(String sentence){
+        boolean isInOrder = true;
+        sentence = sentence.toLowerCase();
+        for(int i =1; i< sentence.length(); i++){
+            if(i == sentence.length()){
+                break;
+            }
+            else if(sentence.charAt(i)>= sentence.charAt(i-1)){
+                isInOrder= true;
+            }
+            else{
+                isInOrder= false;
+                break;
+            }
+        }
+        return isInOrder;
+    }

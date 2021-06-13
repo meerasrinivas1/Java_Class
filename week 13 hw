@@ -1,0 +1,45 @@
+1. string_fan = ""
+while True:
+    fan_status = str(input("Do you want to turn the fan on or off "))
+    fan_status = fan_status.lower()
+    if(fan_status == "on" ):
+        if(string_fan == "on"):
+            print("the fan is ALREADY on")
+        else:
+            print("turning fan on...")
+            string_fan = "on"
+    elif (fan_status == "off"):
+        if(string_fan == "off"):
+            print("The fan is ALREADY off")
+        else:
+            print("turning fan off...")
+            string_fan = "off"
+    elif(fan_status == "quit"):
+        print("ok quiting")
+        break
+    else:
+        print("not valid sorry")
+        num_to_guess = 15                                                
+
+
+2. guesses = 0                                                      
+#user_guess = int(input("guess a number "))                      
+while True:                                                      
+    user_guess = int(input("guess a number "))                   
+    guesses +=1                                                  
+    if(num_to_guess == user_guess) :                             
+        print("correct")                                         
+        if(guesses <=5):                                         
+            points = 10                                          
+            print('nice, points: ' + str(points))                
+            break                                                
+        elif(guesses <=10 and guesses>5):                        
+                points = 5                                       
+                print('nice, total: 5 points')                   
+                break                                            
+    if(guesses>10):                                              
+        print('you used up too many guesses')                    
+        break                                                    
+    print("sorry, try again")                                    
+
+3. 

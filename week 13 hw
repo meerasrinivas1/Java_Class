@@ -42,4 +42,17 @@ while True:
         break                                                    
     print("sorry, try again")                                    
 
-3. 
+3. final = ""                                             
+num = '123456'                                         
+num_len= len(num)-1                                    
+len_of_num = len(num)                                  
+while (len_of_num>0):                                  
+    for i in num:                                      
+         final +=(str(i) + ('0'*num_len) + " + ")      
+         num_len-=1                                    
+         len_of_num-=1                                 
+                                                       
+print(final[0:-2])       
+
+
+

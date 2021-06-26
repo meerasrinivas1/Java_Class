@@ -1,0 +1,20 @@
+1. x = False
+for i in range(x_1,400,x_1):
+    for j in range(y_2,400,y_2):
+        for k in range(z_3,100,z_3):
+            if (j==i) and (j==k) and (i==k):
+                print(f'Lcm is {k}')
+                x = True
+                quit()
+                
+                
+2. num_factor = 24
+final = "24: "
+for a in range(1,num_factor+1):
+    if(num_factor%a == 0):
+        final += f'{a} '
+print(final)
+
+3. 
+                
+                

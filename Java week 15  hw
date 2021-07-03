@@ -1,0 +1,63 @@
+1. # def num_ring_pattern(n):
+#     outer = n*2-1
+#     lista = ""
+#     for i in range(0,outer+1):
+#         for j in range(i):
+#             print(n)
+#     for i in range(outer,0,-1):
+#         for j in range(outer,0,-1):
+#             string1 = (n)
+#         print(" ")
+#     print(string1)
+# num_ring_pattern(3)
+
+
+2. def curtain(num):
+    n=""
+    x=""
+    y=num
+    for i in range(num,0,-1):
+        x+=str(i)+""
+
+    while y>0:
+        if str(x[0:y][::-1][0])!="1":
+            z = str(x[0:y][::-1])
+        else:
+            z=str(x[0:y][::-1])
+        n+=(f'{str(x[0:y])}{(num-y)*" "}{z}\n')
+        y-=1
+    print(n)
+curtain(6)
+
+3. def alpha_pyrimad(line):
+    count=1
+    for i in range(65,65+line):
+        print((chr(i)*count).center(15))
+        count+=2
+    count -=2
+    for i in range(90,90-line,-1):
+        print((chr(i)*(count)).center(15))
+        count-=2
+alpha_pyrimad(4)
+
+4. def merge_dict(dict1, dict2):
+     dict3=  (dict1.update(dict2))
+     return dict3
+
+5. def str_key(str1):
+    dict_output = {}
+    count = 0
+    for i in str1:
+        for j in str1:
+            if(i == j):
+                count+=1
+                dict_output[i]= count
+        count = 0
+    return dict_output
+
+out = str_key("carrot")
+print(out)
+
+#def number_ring_patter(number):
+   # a=None
+    #add = number+3

@@ -1,0 +1,84 @@
+1. def check_true(*args):
+    val = False
+    for i in args:
+        if i == None:
+            val = False
+            break
+        if i  == 0:
+            val =  False
+            break
+        if i == False:
+            val =  False
+            break
+        else:
+            val = True
+    return val
+
+val = check_true(10,15,0,1,3,True,"Test")
+print(val)
+
+2. 
+
+
+
+3. def group_ints(*args):
+    even_list = []
+    odd_list = []
+    for i in args:
+        if i % 2 ==0:
+            even_list.append(i)
+        else:
+            odd_list.append(i)
+    return even_list, odd_list
+
+even_list, odd_list = group_ints(10,20,5,9,126,87,65,103,96)
+print(even_list, odd_list)
+
+4. def circle_data(area= 0, radius= 0):
+    diameter = 0
+    circumference = 0
+    if area >0:
+        radius = math.sqrt(area / math.pi)
+        diameter = radius *2
+        circumference = diameter * math.pi
+        return area, radius, diameter, circumference
+        # break
+    if radius>0:
+        area= radius **2 * math.pi
+        diameter = radius * 2
+        circumference = diameter * math.pi
+        return area.__round__(4), radius.__round__(4), diameter.__round__(4), circumference.__round__(4)
+area, radius, diameter, circumference= circle_data(radius= 5)
+print(f'area: {area}, radius: {radius}, diameter: {diameter}, circumference: {circumference}')
+
+5. def mean_median_mode(*args):
+    sum = 0
+    list1 =[]
+    median = 0
+    for i in args:
+        sum+= i
+    mean= sum / len(args)
+    for i in args:
+        list1.append(i)
+    list1.sort()
+    len_list1 = int(len(list1))
+    median =0
+    if len_list1 % 2 == 0:
+        median = (list1[int(len_list1/2-1)] + list1[int(len_list1/2)])/2.0
+        print(f'mean: {mean} median: {median}')
+    else:
+        median = list1[int(len_list1/2)]
+        print(f'mean: {mean} median: {median}')
+    num_repeat = {i:0 for i in args}
+    values = "The mode is "
+    for i in args:
+        for in_num_repeat in num_repeat:
+            if in_num_repeat == i:
+                num_repeat[in_num_repeat] += 1
+    y = max(num_repeat.values())
+    for i in num_repeat:
+        if num_repeat.get(i) == y:
+            values += f'{i},'
+    print(values[:-1])
+# median = mean_median_mode(15, 18, 8, 15, 22, 27, 3, 5, 3, 6, 3, 18, 16, 4, 20,15)
+# print(median)

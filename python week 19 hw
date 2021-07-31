@@ -1,0 +1,37 @@
+import math
+#num 1
+param = (5,10,20,30)
+l1 = list(map(lambda n: (float(n) *2.0 * math.pi,float(n)**2 * math.pi),param))
+print(l1)
+
+#num4
+list1= ['apple', 'banana', 'cherry']
+l3 = (map(lambda n: ''.join(sorted({i for i in n})), list1))
+print(list(l3))
+
+def cipher_rotation(n):
+    for i in n:
+        pass
+
+#num5
+abc = map(lambda n: {i: n.count(i) for i in n},list1)
+print(list(abc))
+
+#num3
+values = [('John', 80,60,40),('Anand', 85,90,62), ('Shilpa', 82,73,51), ('Baker', 30,70,87)]
+# def avg_score(my_list):
+#     l1 = (my_list[0],round(sum(list(my_list[1:]))/(len(my_list)-1)))
+#     return l1
+l5 = map(lambda my_list:(my_list[0],round(sum(list(my_list[1:]))/(len(my_list)-1))),values)
+print(list(l5))
+
+
+
+
+
+
+
+
+
+
+

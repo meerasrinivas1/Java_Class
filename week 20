@@ -1,0 +1,48 @@
+from functools import reduce
+
+
+l3 = [6,55,8]
+add_num = list(map((lambda n: n+1 if n>50 else n+11),l3))
+print(add_num)
+
+l4 = ["apple", "carrot", "ghost", "empty"]
+# def char_in_order(n):
+#     l1 =[]
+#     j = sorted(n)
+#     j= ''.join(j)
+#     if j == n:
+#         bool = True
+#     else:
+#         bool = False
+#     l1.append(bool)
+#     return l1
+chars = list(map((lambda x: True if ''.join(sorted(x))==x else False),l4))
+print(chars)
+
+dict1 = {'Apple': 2.50, 'Cherry': 4.35, 'Lemon': 2.85, 'Mango': 1.5}
+
+dict2 ={}
+def update_price(x):
+    n = x.lower()
+    if n.__contains__('a'):
+       dict1[x]= dict1.get(x) * 0.9
+price = list(map(update_price,dict1))
+print(dict1)
+
+invoice_list = [{'item': 'Apple', 'qty': 10, 'unit_price': 0.65}, {'item': 'Orange', 'qty': 20, 'unit_price': 0.35},{'item':'Banana', 'qty': 100, 'unit_price': 0.15},{'item':'Water Melon', 'qty': 3, 'unit_price': 2.25}]
+# invoices = list(map(lambda x: x["qty"]*x["unit_price"],invoice_list))
+y = reduce(lambda x,y: x+y,list(map(lambda x: x["qty"]*x["unit_price"],invoice_list)))
+print(y)
+l6 =[]
+d2 ={}
+def movie_year_count(x):
+    # print(x['year'])
+    l6.append(x['year'])
+    d2[x['year']] = l6.count(x['year'])
+
+
+movie_list = [{'name':'movie 1', 'year':2001}, {'name':'movie 2', 'year': 2003}, {'name':'movie 3', 'year':2001}, {'name':'movie 4', 'year':2002}, {'name':'movie 5', 'year':2002}, {'name':'movie 6', 'year':2002},{'name':'movie 7', 'year':2001}]
+year = list(map(movie_year_count,movie_list))
+print(d2)
+
+

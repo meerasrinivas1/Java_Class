@@ -37,3 +37,36 @@ def write_data2(name, marks):
 while True:
     name, marks=collect_data2()
     write_data2(name,marks)
+    
+    
+3. def collect_data3():
+    model = input("Enter model: ")
+    vehical_type = input("Enter vehical type: ")
+    seat_type = input("Enter seat type: ")
+    capacity = input("Enter capacity: ")
+    gas = input("Enter gas: ")
+    mpg = input("Enter mpg: ")
+    if gas == "gas":
+        gas = True
+    if gas == "diesel:
+        gas = False
+    return model, vehical_type, seat_type, capacity, gas, mpg
+def write_data3(model,vehical_type, seat_type,capacity, gas, mpg):
+    path = 'data/car_data.txt'
+    with open(path, 'a') as f:
+        f.write(f'model, vehical type, seat type, capacity, gas, mpg\n')
+        f.write(f'{model}, {vehical_type}, {seat_type}, {capacity}, {gas}, {mpg}\n\n')
+while True:
+    model, vehical_type, seat_type, capacity, gas, mpg = collect_data3()
+    write_data3(model, vehical_type, seat_type, capacity, gas, mpg)
+
+4. def write_data():
+    path = 'data/date_time.txt'
+    with open(path, 'a') as f:
+        f.write(time.strftime("%m%d%Y-%H%M\n"))
+
+while True:
+    write_data()
+    break
+    
+5.

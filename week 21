@@ -1,0 +1,39 @@
+1. 1.  Write a program that will take input for collecting student info and store in file.  Leave a blank line
+    after each student. One detail in each line (Name, Gender, DOB, City).  End the program when Name is "-1"
+    Note: Each time I run the program the previous data should still exist.
+    
+def collect_data():
+    name = input("Enter name: ")
+    if name == "-1":
+        return None, None, None, None
+    gender = input("Enter gender: ")
+    dob = input("Enter dob: ")
+    city = input("Enter city: ")
+    return name, gender, dob, city
+def write_data(name, gender, dob, city):
+    path = 'data/student_info.txt'
+    with open(path, 'a') as f:
+        f.write(f'{name}\n{gender}\n{dob}\n{city}\n\n')
+
+while True:
+    name, gender,dob,city = collect_data()
+    if name is None:
+        break
+    else:
+        write_data(name,gender,dob,city)
+        
+2. Write a program to collect Student names and their marks in 5 subjects (English, Maths, Physics, Chemistry, Biology)
+    Marks will be entered in comma separated format. Leave blank line after each student  
+    
+def collect_data2():
+    name = input("Enter Name: ")
+    marks= input("Enter marks in 5 subjects (English, Maths, Physics, Chemistry, Biology))")
+    return name, marks
+def write_data2(name, marks):
+    path = 'data/student_marks.txt'
+    with open(path, 'a') as f:
+        f.write(f'{name}\n{marks}\n\n')
+
+while True:
+    name, marks=collect_data2()
+    write_data2(name,marks)
